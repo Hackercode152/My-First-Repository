@@ -1,0 +1,73 @@
+ body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    
+    .header {
+      background-color: #00eeff85;
+      color: rgb(0, 0, 0);
+      text-align: center;
+      padding: 20px;
+    }
+
+
+
+    .sidebar a:hover {
+      background-color: #01ffff;
+    }
+
+
+    .content {
+      margin-left: 20px;
+      padding: 20px;
+    }
+
+    .border-box {
+      border: 2px solid rgba(252, 0, 0, 0.856);
+      border-radius: 10px;
+      padding: 15px;
+    }
+
+    p {
+    margin: 10px 0;
+    }
+
+
+
+  
+    .border1 {
+      border: 2px solid black;
+      margin: 10px;
+      padding: 10px;
+    }
+
+    .border2 {
+      border: 15px groove rgb(90, 2, 2);
+      margin: 10px;
+      padding: 10px;
+    }
+
+    .border3 {
+      border: 35px ridge rgb(235, 248, 0);
+      margin: 10px;
+      padding: 10px;
+    }
+
+    .border4 {
+      border: thin ridge gray;
+      margin: 10px;
+      padding: 10px;
+    }
+
+    .border5 {
+      border: medium inset lightgray;
+      margin: 10px;
+      padding: 10px;
+    }
+
+    .border6 {
+      border: thick outset darkgray;
+      margin: 10px;
+      padding: 10px;
+     }
