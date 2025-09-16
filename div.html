@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Online Selling Platform</title>
+  <!-- W3.CSS + Theme -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+
+  <style>
+    :root {
+      --card-radius: 14px;
+      --bg-light: #f7f7f7;
+      --bg-dark: #1d1d1d;
+      --text-light: #333;
+      --text-dark: #f1f1f1;
+      --card-light: #fff;
+      --card-dark: #2a2a2a;
+    }
+
+    body {
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      transition: 0.3s ease;
+      font-family: "Arial", sans-serif;
+    }
+
+    body.dark {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    .card {
+      border-radius: var(--card-radius);
+      background: var(--card-light);
+      transition: 0.3s ease;
+      padding: 16px;
+    }
+
+    body.dark .card {
+      background: var(--card-dark);
+    }
+
+    .card:hover {
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      transform: translateY(-5px);
+    }
+
+    .pill {
+      border-radius: 999px;
+    }
+
+    #darkToggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+    }
+
+    @media (max-width: 768px) {
+      .w3-quarter {
+        width: 100% !important;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body class="w3-theme-l5">
+
+  <header class="w3-container w3-theme w3-center w3-padding-32 w3-card-4">
+    <h1 class="w3-xxlarge"><i class="fa-solid fa-store w3-margin-right"></i>Online Selling Platform</h1>
+    <p class="w3-opacity">Explore the essential components of an online store</p>
+  </header>
+
+  <main class="w3-content w3-padding-32" style="max-width:1200px">
+    <div class="w3-row-padding">
+
+      <!-- Product Listings -->
+      <div class="w3-quarter">
+        <div class="w3-card w3-padding card">
+          <h3><i class="fa-solid fa-box-open w3-text-orange w3-margin-right"></i>Product Listings</h3>
+          <ul class="w3-ul w3-hoverable">
+            <li>Electronics <span class="w3-badge w3-blue pill w3-right">category</span></li>
+            <li>Clothing <span class="w3-badge w3-pink pill w3-right">category</span></li>
+            <li>Home Appliances <span class="w3-badge w3-green pill w3-right">category</span></li>
+            <li>Books <span class="w3-badge w3-purple pill w3-right">category</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Payment Options -->
+      <div class="w3-quarter">
+        <div class="w3-card w3-padding card">
+          <h3><i class="fa-solid fa-credit-card w3-text-teal w3-margin-right"></i>Payment Options</h3>
+          <ul class="w3-ul w3-hoverable">
+            <li>Credit/Debit Card <span class="w3-badge w3-teal pill w3-right">Payment</span></li>
+            <li>PayPal <span class="w3-badge w3-blue pill w3-right">Online</span></li>
+            <li>Cash on Delivery <span class="w3-badge w3-green pill w3-right">Option</span></li>
+            <li>Bank Transfer <span class="w3-badge w3-orange pill w3-right">Option</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Shipping Methods -->
+      <div class="w3-quarter">
+        <div class="w3-card w3-padding card">
+          <h3><i class="fa-solid fa-truck w3-text-yellow w3-margin-right"></i>Shipping Methods</h3>
+          <ul class="w3-ul w3-hoverable">
+            <li>Standard Shipping <span class="w3-badge w3-grey pill w3-right">5-7 Days</span></li>
+            <li>Express Shipping <span class="w3-badge w3-purple pill w3-right">2-3 Days</span></li>
+            <li>International Shipping <span class="w3-badge w3-blue pill w3-right">Worldwide</span></li>
+            <li>Same Day Delivery <span class="w3-badge w3-teal pill w3-right">Local</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Customer Reviews -->
+      <div class="w3-quarter">
+        <div class="w3-card w3-padding card">
+          <h3><i class="fa-solid fa-comment w3-text-green w3-margin-right"></i>Customer Reviews</h3>
+          <ul class="w3-ul w3-hoverable">
+            <li>⭐⭐⭐⭐⭐ Excellent Service <span class="w3-badge w3-green pill w3-right">feedback</span></li>
+            <li>⭐⭐⭐⭐ Great Product <span class="w3-badge w3-teal pill w3-right">review</span></li>
+            <li>⭐⭐⭐ Good quality <span class="w3-badge w3-blue pill w3-right">rating</span></li>
+            <li>⭐⭐⭐⭐⭐ Fast Shipping <span class="w3-badge w3-orange pill w3-right">praise</span></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="w3-center w3-padding-24 w3-text-grey w3-small">
+    Built for the future of online shopping <a href="https://www.w3schools.com/w3css/" target="_blank" class="w3-text-theme">W3.CSS</a>.
+  </footer>
+
+  <!-- Dark Mode Toggle -->
+  <button id="darkToggle" class="w3-button w3-theme pill">
+    <i class="fa-solid fa-moon"></i> Toggle Dark
+  </button>
+
+  <script>
+    const toggle = document.getElementById('darkToggle');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      toggle.innerHTML = document.body.classList.contains('dark')
+        ? '<i class="fa-solid fa-sun"></i> Toggle Light'
+        : '<i class="fa-solid fa-moon"></i> Toggle Dark';
+    });
+  </script>
+
+</body>
+</html>
