@@ -23,16 +23,6 @@ body {
   overflow: hidden;
 }
 
-.code-line {
-  position: absolute;
-  top: -100%;
-  width: 1px;
-  height: 100%;
-  background: linear-gradient(to bottom, #00ffcc 0%, transparent 100%);
-  animation: fall linear infinite;
-  opacity: 0.1;
-}
-
 @keyframes fall {
   0% {
     transform: translateY(-100%);
