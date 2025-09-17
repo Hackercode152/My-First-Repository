@@ -1,46 +1,57 @@
-body {
+/* Basic Reset */
+* {
   margin: 0;
   padding: 0;
-  font-family: 'Courier New', monospace;
-  color: #00ffcc;
-  background-color: #11006f;
-  overflow: hidden;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  box-sizing: border-box;
 }
 
-/* Background code rain effect */
-.code-rain {
+/* Background Grid */
+.background {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none;
+  background:
+    linear-gradient(#0f0f0f 1px, transparent 1px),
+    linear-gradient(90deg, #0f0f0f 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-color: #050505;
   z-index: -1;
-  overflow: hidden;
 }
 
-@keyframes fall {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(100%);
-  }
+/* Optional glowing effect */
+.background::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, rgba(0,255,128,0.05) 0%, transparent 70%);
+  pointer-events: none;
 }
 
-/* Generate multiple code lines with nth-child */
-.code-line:nth-child(1)  { left: 5%;  animation-duration: 6s; }
-.code-line:nth-child(2)  { left: 10%; animation-duration: 8s; }
-.code-line:nth-child(3)  { left: 15%; animation-duration: 5s; }
-.code-line:nth-child(4)  { left: 20%; animation-duration: 7s; }
-.code-line:nth-child(5)  { left: 25%; animation-duration: 9s; }
-.code-line:nth-child(6)  { left: 30%; animation-duration: 6s; }
-.code-line:nth-child(7)  { left: 35%; animation-duration: 10s; }
-.code-line:nth-child(8)  { left: 40%; animation-duration: 5s; }
-.code-line:nth-child(9)  { left: 45%; animation-duration: 8s; }
-.code-line:nth-child(10) { left: 50%; animation-duration: 6s; }
+/* Foreground content */
+.content {
+  color: #00ffcc;
+  font-family: 'Courier New', monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  padding: 2rem;
+}
 
+.content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 5px #00ffcc;
+}
+
+.content p {
+  font-size: 1.25rem;
+  color: #66ffe0;
+}
