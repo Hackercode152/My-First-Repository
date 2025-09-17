@@ -5,6 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <title>My Resume</title>
+<head>
+  <meta charset="UTF-8">
+  <title>Matrix Code Background</title>
+  <style>
+    /* Paste the CSS code above here */
+  </style>
+</head>
+<body>
+  <div class="matrix" id="matrix"></div>
+
+  <script>
+    const matrix = document.getElementById('matrix');
+    const chars = 'アァイィウエカキクケコサシスセソタチツテトナニヌネノABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    const screenWidth = window.innerWidth;
+    const columnCount = Math.floor(screenWidth / 20);
+
+    for (let i = 0; i < columnCount * 10; i++) {
+      const symbol = document.createElement('div');
+      symbol.classList.add('symbol');
+      symbol.innerText = chars[Math.floor(Math.random() * chars.length)];
+      symbol.style.left = `${Math.floor(Math.random() * 100)}%`;
+      symbol.style.animationDuration = `${Math.random() * 5 + 5}s`;
+      symbol.style.animationDelay = `${Math.random() * 10}s`;
+      matrix.appendChild(symbol);
+    }
+  </script>
+</body>
+</html>
 </head>
 <body>
     <h1>Cabatay Mark</h1>
